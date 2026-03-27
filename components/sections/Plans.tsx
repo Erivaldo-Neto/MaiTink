@@ -34,12 +34,12 @@ interface PriceCardProps {
   price: string;
   description: string;
   buttonText: string;
-  highlight?: boolean;
+
   neonColor: "turquoise" | "yellow";
   delay: number;
 }
 
-const PriceCard = ({ name, price, description, buttonText, highlight, neonColor, delay }: PriceCardProps) => {
+const PriceCard = ({ name, price, description, buttonText, neonColor, delay }: PriceCardProps) => {
   const isTurbo = name === "TURBO";
   const shadow = isTurbo ? NEON_TURQUOISE_INTENSE : neonColor === "turquoise" ? NEON_TURQUOISE : NEON_YELLOW;
   
@@ -172,7 +172,7 @@ const Plans = () => {
                 price="R$2.997"
                 description="6 serviços · 5 canais · gestor exclusivo"
                 buttonText="ASSINAR PLANO TURBO"
-                highlight
+
                 neonColor="turquoise"
                 delay={3}
               />

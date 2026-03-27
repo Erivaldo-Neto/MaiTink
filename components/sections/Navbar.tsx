@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { SITE_DATA } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { scrollY } = useScroll();
+
 
   useEffect(() => {
     const handleScroll = () => {

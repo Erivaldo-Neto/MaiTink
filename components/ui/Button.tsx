@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import { ReactNode, ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost" | "turquoise";
   size?: "sm" | "md" | "lg";
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const Button = ({ 

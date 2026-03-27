@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface SectionWrapperProps {
-  children: React.ReactNode;
+  children: ReactNode;
   id?: string;
   variant?: "dark" | "yellow";
   className?: string;

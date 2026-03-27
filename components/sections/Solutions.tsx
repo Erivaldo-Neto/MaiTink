@@ -7,7 +7,6 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-  animate,
 } from "framer-motion";
 import {
   Target,
@@ -330,7 +329,7 @@ function BezierConnections({
       // startY: bottom of row1 cards, endY: top of row2 cards (relative to container top)
       const row1Bottom = (r1[0]!.y) + row1Refs[0].current!.offsetHeight;
       const row2Top = r2[0]!.y;
-      const midY = (row1Bottom + row2Top) / 2;
+
       setSvgHeight(row2Top); // SVG spans from container top to row2 top
 
       const result: { d: string; color: string; id: string }[] = [];
