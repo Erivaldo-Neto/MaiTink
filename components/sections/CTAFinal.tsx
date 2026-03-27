@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ShinyButton from "@/components/ui/shiny-button";
+import AnimatedBorderButton from "@/components/ui/animated-border-button";
 
 /* ────────────────────────────────────────────────────────
    ANIMATIONS
@@ -86,11 +88,14 @@ export default function CTAFinal() {
             whileInView="visible"
             viewport={{ once: true }}
             custom={5}
-            whileHover={{ scale: 1.03, translateY: -3, boxShadow: "0 10px 30px rgba(49,255,206,0.3)" }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full md:w-auto px-10 py-5 bg-[#31ffce] text-[#0a0a0a] font-bebas text-[1.4rem] uppercase tracking-wider rounded-[0.5rem] shadow-[0_4px_20px_rgba(49,255,206,0.2)] transition-all flex items-center justify-center"
+            className="w-full md:w-auto"
           >
-            Agendar uma reunião
+            <ShinyButton 
+              variant="secondary" 
+              className="w-full md:w-auto px-10 h-[64px] text-[1.4rem] font-bebas uppercase tracking-wider flex items-center justify-center gap-3"
+            >
+              Agendar uma reunião <span className="text-xl">➔</span>
+            </ShinyButton>
           </motion.a>
 
           <motion.a
@@ -100,11 +105,11 @@ export default function CTAFinal() {
             whileInView="visible"
             viewport={{ once: true }}
             custom={6}
-            whileHover={{ scale: 1.03, translateY: -3, backgroundColor: "rgba(0,0,0,0.06)" }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full md:w-auto px-10 py-5 border-2 border-[#0a0a0a] text-[#0a0a0a] font-bebas text-[1.4rem] uppercase tracking-wider rounded-[0.5rem] transition-all flex items-center justify-center"
+            className="w-full md:w-auto"
           >
-            Ver os Planos
+            <AnimatedBorderButton className="w-full md:w-auto px-10 h-[64px] text-[1.4rem] font-bebas uppercase tracking-wider border-[#0a0a0a] text-[#0a0a0a] hover:border-[#0a0a0a] hover:bg-black/5 hover:shadow-none flex items-center justify-center">
+              Ver os Planos
+            </AnimatedBorderButton>
           </motion.a>
         </div>
 

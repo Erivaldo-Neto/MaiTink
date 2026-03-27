@@ -374,7 +374,7 @@ const Hero = () => {
             top: 0;
             bottom: auto;
             width: 100%;
-            max-width: 320px;
+            max-width: 360px;
             height: auto;
             margin: 0 auto 20px;
             z-index: 2;
@@ -390,7 +390,7 @@ const Hero = () => {
           .hs-img {
             width: 100%;
             height: auto;
-            max-height: 40vh;
+            max-height: 48vh;
           }
 
           .hs-wrap {
@@ -403,8 +403,8 @@ const Hero = () => {
 
           .hs-content {
             width: 100%;
-            text-align: center;
-            align-items: center;
+            text-align: left;
+            align-items: flex-start;
           }
 
           .ht {
@@ -432,6 +432,7 @@ const Hero = () => {
             width: 100%;
             max-width: 320px;
             gap: 12px;
+            align-items: flex-start;
           }
           
           .hs-ctas > a {

@@ -76,7 +76,7 @@ export default function ContactForm() {
       <div className="max-w-[780px] mx-auto">
         
         {/* HEADER */}
-        <div className="mb-16 text-center space-y-4">
+        <div className="mb-16 space-y-4">
           <motion.span
             variants={fadeUp}
             initial="hidden"
@@ -112,7 +112,7 @@ export default function ContactForm() {
             whileInView="visible"
             custom={2}
             viewport={{ once: true }}
-            className="font-dm text-[1rem] text-white/65 max-w-xl mx-auto"
+            className="font-dm text-[1rem] text-white/65 max-w-xl"
           >
             "A primeira conversa é gratuita — e já vem com um diagnóstico do seu marketing atual."
           </motion.p>

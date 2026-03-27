@@ -142,7 +142,7 @@ export default function FAQ() {
       <div className="max-w-[860px] mx-auto">
         
         {/* HEADER */}
-        <div className="mb-16 text-center space-y-4">
+        <div className="mb-16 space-y-4">
           <motion.span
             variants={fadeUp}
             initial="hidden"

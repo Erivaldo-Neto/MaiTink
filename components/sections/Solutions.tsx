@@ -475,7 +475,7 @@ const IA_NAMES = [
 ];
 
 function Marquee() {
-  const items = [...IA_NAMES, ...IA_NAMES]; // duplicate for seamless loop
+  const items = [...IA_NAMES, ...IA_NAMES, ...IA_NAMES]; // duplicate for seamless loop
 
   return (
     <div
@@ -487,18 +487,7 @@ function Marquee() {
           "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
       }}
     >
-      <motion.div
-        className="flex gap-12 items-center"
-        style={{ whiteSpace: "nowrap" }}
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear",
-          repeatType: "loop",
-        }}
-        whileHover={{ animationPlayState: "paused" as any }}
-      >
+      <div className="marquee-track flex gap-12 items-center">
         {items.map((name, i) => (
           <React.Fragment key={`${name}-${i}`}>
             <span
@@ -510,7 +499,25 @@ function Marquee() {
             <span className="text-white/30 shrink-0 text-xl">·</span>
           </React.Fragment>
         ))}
-      </motion.div>
+      </div>
+      <style>{`
+        .marquee-track {
+          white-space: nowrap;
+          animation: scroll-marquee 15s linear infinite;
+        }
+        @media (max-width: 768px) {
+          .marquee-track {
+            animation: scroll-marquee 8s linear infinite;
+          }
+        }
+        @keyframes scroll-marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-33.3333%); }
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </div>
   );
 }

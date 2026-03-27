@@ -25,7 +25,7 @@ export default function AnimatedBorderButton({
           animation: 'borderSlide 3s linear infinite',
         }}
       />
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 flex items-center justify-center gap-2 size-full">{children}</span>
 
       <style jsx>{`
         @keyframes borderSlide {

@@ -124,7 +124,7 @@ const Plans = () => {
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6">
         
         {/* Header */}
-        <div className="mb-16 text-center space-y-4">
+        <div className="mb-16 space-y-4">
           <motion.h2
             variants={fadeUp}
             initial="hidden"
@@ -142,7 +142,7 @@ const Plans = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
             custom={1}
-            className="font-dm text-[1.1rem] text-white/70 max-w-2xl mx-auto"
+            className="font-dm text-[1.1rem] text-white/70 max-w-2xl"
           >
             Todos os planos incluem IA de ponta. A diferença é o quanto você quer escalar.
           </motion.p>
