@@ -72,8 +72,8 @@ const floatAnim = {
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.85, ease: [0.21, 0.47, 0.32, 0.98] } },
 };
 
 const stagger = {
@@ -349,7 +349,7 @@ const Hero = () => {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding-top: 100px;
+            padding-top: 76px;
             padding-bottom: 60px;
             overflow-y: auto;
             overflow-x: hidden;
@@ -374,9 +374,9 @@ const Hero = () => {
             top: 0;
             bottom: auto;
             width: 100%;
-            max-width: 360px;
+            max-width: 440px;
             height: auto;
-            margin: 0 auto 20px;
+            margin: 0 auto 4px;
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -390,7 +390,7 @@ const Hero = () => {
           .hs-img {
             width: 100%;
             height: auto;
-            max-height: 48vh;
+            max-height: 56vh;
           }
 
           .hs-wrap {
@@ -408,9 +408,10 @@ const Hero = () => {
           }
 
           .ht {
-            font-size: clamp(34px, 10vw, 52px);
-            white-space: normal;
+            font-size: clamp(24px, 8.5vw, 50px);
+            white-space: nowrap;
             line-height: 1.1;
+            letter-spacing: -0.03em;
           }
 
           .hs-titles { margin-bottom: 20px; }

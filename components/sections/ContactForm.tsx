@@ -28,14 +28,15 @@ type FormValues = z.infer<typeof formSchema>;
    ANIMATIONS
 ──────────────────────────────────────────────────────── */
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      delay: i * 0.08,
-      duration: 0.8,
-      ease: [0.21, 0.47, 0.32, 0.98],
+      delay: i * 0.1,
+      duration: 0.85,
+      ease: [0.21, 0.47, 0.32, 0.98]
     },
   }),
 };

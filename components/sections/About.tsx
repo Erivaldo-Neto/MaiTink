@@ -47,11 +47,12 @@ function AnimatedMetric({
    ANIMATIONS
 ──────────────────────────────────────────────────────── */
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: [0.215, 0.61, 0.355, 1] },
+    scale: 1,
+    transition: { delay: i * 0.1, duration: 0.85, ease: [0.21, 0.47, 0.32, 0.98] },
   }),
 };
 
