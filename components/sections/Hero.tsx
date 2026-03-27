@@ -257,8 +257,8 @@ const Hero = () => {
 
         .hs-img {
           width: auto;
-          height: 90%;
-          max-height: 85vh;
+          height: 98%;
+          max-height: none;
           object-fit: contain;
           object-position: bottom;
         }

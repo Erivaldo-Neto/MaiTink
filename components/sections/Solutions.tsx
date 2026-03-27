@@ -515,11 +515,11 @@ function Marquee() {
       </div>
       <style>{`
         .marquee-track {
-          animation: scroll-marquee 8s linear infinite;
+          animation: scroll-marquee 22s linear infinite;
         }
         @media (max-width: 768px) {
           .marquee-track {
-            animation: scroll-marquee 4s linear infinite;
+            animation: scroll-marquee 15s linear infinite;
           }
         }
         @keyframes scroll-marquee {
