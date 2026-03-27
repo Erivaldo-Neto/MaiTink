@@ -475,11 +475,25 @@ const IA_NAMES = [
 ];
 
 function Marquee() {
-  const items = [...IA_NAMES, ...IA_NAMES, ...IA_NAMES]; // duplicate for seamless loop
+  const renderItems = () => (
+    <>
+      {IA_NAMES.map((name, i) => (
+        <React.Fragment key={`${name}-${i}`}>
+          <span
+            className="font-[var(--font-poppins)] font-medium shrink-0"
+            style={{ fontSize: "1.1rem", color: "#ffed00" }}
+          >
+            {name}
+          </span>
+          <span className="text-white/30 shrink-0 text-xl">·</span>
+        </React.Fragment>
+      ))}
+    </>
+  );
 
   return (
     <div
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden flex"
       style={{
         maskImage:
           "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
@@ -487,32 +501,30 @@ function Marquee() {
           "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
       }}
     >
-      <div className="marquee-track flex gap-12 items-center">
-        {items.map((name, i) => (
-          <React.Fragment key={`${name}-${i}`}>
-            <span
-              className="font-[var(--font-poppins)] font-medium shrink-0"
-              style={{ fontSize: "1.1rem", color: "#ffed00" }}
-            >
-              {name}
-            </span>
-            <span className="text-white/30 shrink-0 text-xl">·</span>
-          </React.Fragment>
-        ))}
+      <div className="marquee-track flex shrink-0 items-center gap-12 pr-12">
+        {renderItems()}
+      </div>
+      <div className="marquee-track flex shrink-0 items-center gap-12 pr-12" aria-hidden="true">
+        {renderItems()}
+      </div>
+      <div className="marquee-track flex shrink-0 items-center gap-12 pr-12" aria-hidden="true">
+        {renderItems()}
+      </div>
+      <div className="marquee-track flex shrink-0 items-center gap-12 pr-12" aria-hidden="true">
+        {renderItems()}
       </div>
       <style>{`
         .marquee-track {
-          white-space: nowrap;
-          animation: scroll-marquee 6s linear infinite;
+          animation: scroll-marquee 8s linear infinite;
         }
         @media (max-width: 768px) {
           .marquee-track {
-            animation: scroll-marquee 3s linear infinite;
+            animation: scroll-marquee 4s linear infinite;
           }
         }
         @keyframes scroll-marquee {
           0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.3333%); }
+          100% { transform: translateX(-100%); }
         }
       `}</style>
     </div>
